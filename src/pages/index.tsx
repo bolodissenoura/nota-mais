@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { styled } from "../styles";
-import { HomeContainer, ImgContainer } from "../styles/pages/home";
+import { HomeContainer } from "../styles/pages/home";
 
 import "keen-slider/keen-slider.min.css";
 import { ButtonCTA } from "../styles/buttons";
