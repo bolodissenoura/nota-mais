@@ -3,6 +3,7 @@ import { HomeContainer } from "../styles/pages/home";
 
 import { ButtonCTA } from "../styles/buttons";
 import { TypographyH1 } from "../styles/typography";
+import router from "next/router";
 
 export default function Home() {
   return (
@@ -17,7 +18,9 @@ export default function Home() {
         <TypographyH1>
           Veja em quais universidades você seria aprovado!
         </TypographyH1>
-        <ButtonCTA>Simular minha nota agora</ButtonCTA>
+        <ButtonCTA onClick={() => router.push("/simulate")}>
+          Simular minha nota agora
+        </ButtonCTA>
       </HomeContainer>
     </>
   );

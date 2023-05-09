@@ -17,14 +17,18 @@ export const globalStyles = globalCss({
     fontWeight: 400,
   },
 
-  "button, h1": {
+  "button, h1, h2": {
     fontFamily: "Outfit",
     fontWeight: 600,
     letterSpacing: "-2%",
   },
 
-  "p": {
+  p: {
     fontFamily: "Outfit",
     fontWeight: 300,
-  }
+  },
+  ".select": {
+    fontFamily: "Outfit",
+    fontWeight: 400,
+  },
 });

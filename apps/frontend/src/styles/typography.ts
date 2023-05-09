@@ -11,7 +11,23 @@ export const TypographyH1 = styled("h1", {
   fontSize: "$2xl",
 });
 
+export const TypographyH2 = styled("h2", {
+  color: "$purple50",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  textAlign: "left",
+  alignItems: "left",
+  fontSize: "$2xl",
+});
+
 export const TypographyP1 = styled("p", {
   color: "$purple50",
   fontSize: "$sm",
+});
+
+export const TypographyP2 = styled("p", {
+  color: "$purple50",
+  fontSize: "$md",
+  fontWeight: "600",
 });
