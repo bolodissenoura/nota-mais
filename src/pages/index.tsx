@@ -2,6 +2,8 @@
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
+import { styled } from "../styles";
+import { HomeContainer } from "../styles/pages/home";
 
 // import de components
 import { styled } from "../styles";
