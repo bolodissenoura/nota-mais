@@ -8,4 +8,7 @@ export const ButtonCTA = styled("button", {
   background: "linear-gradient(90deg, #8E63EE 2.32%, #8C71C9 107.7%)",
   color: "$purple400",
   fontSize: "$md",
+  "&:hover": {
+    cursor: "pointer"
+  }
 });
