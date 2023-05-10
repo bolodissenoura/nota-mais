@@ -33,8 +33,19 @@ app.get("/engProd/:LP/:MAT/:CH/:CN/:RED", (req: Request, res: Response) => {
   const result = [
     {
       nameCollege: "UFOP",
-      // @ts-ignore
-      mediaGeral: handleMediaPonderada(LP, 1, MAT, 3, CH, 2, CN, 2, RED, 1),
+      mediaGeral: handleMediaPonderada(
+        // @ts-ignore
+        LP,
+        engProd.UFOP.LP,
+        MAT,
+        engProd.UFOP.MAT,
+        CH,
+        engProd.UFOP.CH,
+        CN,
+        engProd.UFOP.CN,
+        RED,
+        engProd.UFOP.RED
+      ),
       approved: passou,
       LPnote: LP,
       MATnote: MAT,
@@ -44,7 +55,20 @@ app.get("/engProd/:LP/:MAT/:CH/:CN/:RED", (req: Request, res: Response) => {
     },
     {
       nameCollege: "UFRJ",
-      approved: !passou,
+      mediaGeral: handleMediaPonderada(
+        // @ts-ignore
+        LP,
+        engProd.UFRJ.LP,
+        MAT,
+        engProd.UFRJ.MAT,
+        CH,
+        engProd.UFRJ.CH,
+        CN,
+        engProd.UFRJ.CN,
+        RED,
+        engProd.UFRJ.RED
+      ),
+      approved: passou,
       LPnote: LP,
       MATnote: MAT,
       CHnote: CH,
