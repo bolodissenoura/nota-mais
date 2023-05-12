@@ -1,7 +1,7 @@
 
 <div align="center">
 <h1 align="center">
-<img src="./src/assets/logo.svg" width="200" />
+<img src="https://raw.githubusercontent.com/bolodissenoura/nota-mais/1ef25c581aa95f915f0cffd77e5854cffaff9bc0/apps/frontend/src/assets/logo.svg" width="200" />
 <br>
 Nota+
 <h3 align="center"> 🔗 https://nota-mais.vercel.app/ </h3>
