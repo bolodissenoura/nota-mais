@@ -1,20 +1,9 @@
-import express from "express";
-import cors from "cors";
-import mongoose from "mongoose";
+import express from 'express';
+import cursoRouter from './routers/curso.router';
 
-class App {
-  public express: express.Application;
+const app = express();
 
-  public constructor() {
-    this.express = express();
-  }
+app.use(express.json());
+app.use(cursoRouter)
 
-  private middlewares() {
-    this.express.use(express.json());
-    this.express.use(cors());
-  }
-
-  private database (): void{
-    mongoose.connect('mongodb://')
-  }
-}
+export default app;
