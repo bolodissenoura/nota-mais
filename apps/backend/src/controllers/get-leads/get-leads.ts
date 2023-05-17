@@ -1,6 +1,6 @@
 import { IGetLeadsController, IGetLeadsRepository } from "./protocols";
 
-export class GetUsersController implements IGetLeadsController {
+export class GetLeadsController implements IGetLeadsController {
   constructor(private readonly getLeadsRepository: IGetLeadsRepository) {}
   async handle() {
     try {
