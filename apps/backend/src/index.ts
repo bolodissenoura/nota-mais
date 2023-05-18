@@ -1,15 +1,25 @@
-import 'dotenv/config';
-import app from './app';
-import connectToDatabase from './models/connection';
+/* eslint-disable turbo/no-undeclared-env-vars */
+import express, { response } from "express";
+import { config } from "dotenv";
+import { MongoGetLeadsRepository } from "./repositories/get-leads/mongo-get-leads";
+import { GetLeadsController } from "./controllers/get-leads/get-leads";
+import { MongoClient } from "./database/mongo";
 
-const PORT = process.env.PORT || 3001;
-connectToDatabase()
-  .then(() => {
-    app.listen(PORT, () => console.log(`Running server on port: ${PORT}`));
-  })
-  .catch((error) => {
-    console.log('Connection with database generated an error:\r\n');
-    console.error(error);
-    console.log('\r\nServer initialization cancelled');
-    process.exit(0);
+const main = async () => {
+  config();
+  await MongoClient.connect();
+  const app = express();
+
+  app.get("/leads", async (req, res) => {
+    const mongoGetLeadsRepository = new MongoGetLeadsRepository();
+
+    const getLeadsController = new GetLeadsController(mongoGetLeadsRepository);
+    const { body, statusCode } = await getLeadsController.handle();
+
+    res.send(body).status(statusCode);
   });
+  const port = process.env.PORT || 8000;
+
+  app.listen(port, () => console.log(`listening on port ${port}!`));
+};
+main();
