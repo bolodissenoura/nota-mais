@@ -34,7 +34,7 @@ const main = async () => {
       headers: undefined
     });
 
-    res.status(statusCode).send(body);
+    res.send(body).status(statusCode);
   });
 
   const port = process.env.PORT || 8000;
