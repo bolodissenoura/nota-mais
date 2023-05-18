@@ -4,7 +4,7 @@ export class GetLeadsController implements IGetLeadsController {
   constructor(private readonly getLeadsRepository: IGetLeadsRepository) {}
   async handle() {
     try {
-      const leads = await this.getLeadsRepository.getUser();
+      const leads = await this.getLeadsRepository.getLead();
       return {
         statusCode: 200,
         body: leads,

@@ -6,5 +6,5 @@ export interface IGetLeadsController {
 }
 
 export interface IGetLeadsRepository {
-  getUser(): Promise<Lead[]>;
+  getLead(): Promise<Lead[]>;
 }

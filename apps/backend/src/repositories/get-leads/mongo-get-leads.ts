@@ -1,14 +1,17 @@
 import { IGetLeadsRepository } from "../../controllers/get-leads/protocols";
+import { MongoClient } from "../../database/mongo";
 import { Lead } from "../../models/leads";
 
 export class MongoGetLeadsRepository implements IGetLeadsRepository {
-  async getUser(): Promise<Lead[]> {
-    return [
-      {
-        name: "Daniel",
-        email: "daniel@limae.com",
-        phone: "12988990193",
-      },
-    ];
+  async getLead(): Promise<Lead[]> {
+    const leads = await MongoClient.db
+      .collection<Omit<Lead, "id">>("leads")
+      .find({})
+      .toArray();
+
+    return leads.map(({ _id, ...rest }) => ({
+      ...rest,
+      id: _id.toHexString(),
+    }));
   }
 }
