@@ -3,10 +3,9 @@ import {
   ICreateLeadRepository,
 } from "../../controllers/create-lead/protocols";
 import { Lead } from "../../models/leads";
-
 import { MongoClient } from "../../database/mongo";
 
-export class MongoCreateLead implements ICreateLeadRepository {
+export class MongoCreateLeadRepository implements ICreateLeadRepository {
   async createLead(params: CreateLeadParams): Promise<Lead> {
     const { insertedId } = await MongoClient.db
       .collection("leads")
