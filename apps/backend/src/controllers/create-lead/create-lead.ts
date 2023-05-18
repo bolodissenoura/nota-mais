@@ -1,3 +1,4 @@
+import validator from "validator";
 import { Lead } from "../../models/leads";
 import { HttpResponse, HttpRequest } from "../protocols";
 import {
@@ -12,14 +13,25 @@ export class CreateLeadController implements ICreateLeadController {
     httpRequest: HttpRequest<CreateLeadParams>
   ): Promise<HttpResponse<Lead>> {
     try {
-      // const requiredFields = ["name", "email", "phone"];
-      if (!httpRequest.body) {
+      const requiredFields = ["name", "email", "phone"];
+      for (const field of requiredFields) {
+        if (!httpRequest?.body?.[field as keyof CreateLeadParams]?.length){
+          return {
+          statusCode: 400,
+          body: `Field ${field} is required`,
+          };
+        }
+      }
+      
+      const emailIsValid = validator.isEmail(httpRequest?.body!.email);
+      if (!emailIsValid){
         return {
           statusCode: 400,
-          body: "Please specify a body",
-        };
+          body: "Email is not valid",
+        }
       }
-      const lead = await this.createLeadRepository.createLead(httpRequest.body);
+
+      const lead = await this.createLeadRepository.createLead(httpRequest.body!);
 
       return {
         statusCode: 200,
