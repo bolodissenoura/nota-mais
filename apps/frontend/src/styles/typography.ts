@@ -21,6 +21,12 @@ export const TypographyH2 = styled("h2", {
   fontSize: "$2xl",
 });
 
+export const TypographyBtn = styled("p", {
+  color: "$purple900",
+  fontSize: "$md",
+  fontWeight: "600",
+});
+
 export const TypographyP1 = styled("p", {
   color: "$purple50",
   fontSize: "$sm",
