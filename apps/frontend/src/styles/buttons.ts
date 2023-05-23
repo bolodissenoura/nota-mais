@@ -1,6 +1,11 @@
 import { styled } from ".";
 
 export const ButtonCTA = styled("button", {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  textAlign: "center",
+  gap: "4px",
   width: "90%",
   height: "3.5rem",
   borderRadius: "2.18rem",
@@ -8,6 +13,7 @@ export const ButtonCTA = styled("button", {
   background: "linear-gradient(90deg, #8E63EE 2.32%, #8C71C9 107.7%)",
   color: "$purple400",
   fontSize: "$md",
+  textDecoration: "none",
   "&:hover": {
     cursor: "pointer",
   },

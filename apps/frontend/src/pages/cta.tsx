@@ -2,10 +2,15 @@ import Head from "next/head";
 import { HomeContainer } from "../styles/pages/home";
 
 import { ButtonCTA } from "../styles/buttons";
-import { TypographyH1, TypographyP1 } from "../styles/typography";
+import {
+  TypographyBtn,
+  TypographyH1,
+  TypographyP1,
+} from "../styles/typography";
 import { GlassMorphism, GlassNotification } from "../styles/pages/cta";
 import Image from "next/image";
 import logoNota from "../assets/logo.svg";
+import ArrowIcon from "../assets/icons/arrowIcon";
 
 export default function Cta() {
   return (
@@ -33,7 +38,8 @@ export default function Cta() {
             background:
               "linear-gradient(90deg, #4FE35E 2.32%, #30E74D 107.7%);",
           }}>
-          Ver todas universidades
+          <TypographyBtn>Ver todas universidades</TypographyBtn>
+          <ArrowIcon size={22} color="#1A132B" />
         </ButtonCTA>
       </HomeContainer>
     </>
