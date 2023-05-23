@@ -28,6 +28,7 @@ export default function Cta() {
           </TypographyP1>
         </GlassNotification>
         <ButtonCTA
+          type="submit"
           css={{
             background:
               "linear-gradient(90deg, #4FE35E 2.32%, #30E74D 107.7%);",
