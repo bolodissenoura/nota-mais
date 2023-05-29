@@ -9,7 +9,7 @@ import {
 
 globalStyles();
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: any) {
   return (
     <Container>
       <ShadowBlurTop />
