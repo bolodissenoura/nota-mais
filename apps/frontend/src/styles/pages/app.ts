@@ -1,6 +1,6 @@
 import { styled } from "..";
 
-export const ShadowBlurTop = styled("div", {
+export const ShadowBlurTop = styled("span", {
   position: "absolute",
   width: "694px",
   height: "577px",
@@ -9,4 +9,5 @@ export const ShadowBlurTop = styled("div", {
   background: "#4C1AEE",
   opacity: 0.5,
   filter: "blur(150px)",
+  zIndex: "-1"
 });

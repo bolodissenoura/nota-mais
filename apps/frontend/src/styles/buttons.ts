@@ -11,7 +11,7 @@ export const ButtonCTA = styled("button", {
   borderRadius: "2.18rem",
   border: "none",
   background: "linear-gradient(90deg, #8E63EE 2.32%, #8C71C9 107.7%)",
-  color: "$purple400",
+  color: "white",
   fontSize: "$md",
   textDecoration: "none",
   transition: "0.3s ease-out",

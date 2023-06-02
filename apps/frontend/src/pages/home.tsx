@@ -1,6 +1,7 @@
 import Head from "next/head"
-import { Navbar } from "../styles/navbar"
+import NavbarComponent from "../styles/navbar"
 import { Container } from "../styles/pages"
+
 
 const Homepage = () => {
   return (
@@ -11,9 +12,6 @@ const Homepage = () => {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container>
-        
-      </Container>
     </>
   )
 }

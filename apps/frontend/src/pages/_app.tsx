@@ -1,16 +1,19 @@
-import type { AppProps } from "next/app";
 import { globalStyles } from "../styles/global";
 
 import { ShadowBlurTop } from "../styles/pages/app";
-import { MainContainer } from "../styles/MainContainer";
+import { MainContainer } from "../styles/containers";
+import NavbarComponent from "../styles/navbar";
 
 globalStyles();
 
 export default function App({ Component, pageProps }: any) {
   return (
-    <MainContainer>
+    <>
+      <NavbarComponent />
+      <MainContainer>
+        <Component {...pageProps} />
+      </MainContainer>
       <ShadowBlurTop />
-      <Component {...pageProps} />
-    </MainContainer>
+    </>
   );
 }
