@@ -3,7 +3,6 @@ import { styled } from ".";
 export const TypographyH1 = styled("h1", {
   color: "$purple50",
   display: "flex",
-  padding: "0px 40px",
   flexDirection: "column",
   justifyContent: "center",
   textAlign: "center",

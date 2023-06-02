@@ -1,19 +1,8 @@
 import { styled } from ".";
 
-export const NavbarMobile = styled("nav", {
+export const Navbar = styled("div", {
     width: "100%",
-    height: "50px",
-    textAlign: "center"
+    padding: "30px",
+    backgroundColor: "blue",
+    maxWidth: "990px"
 })
-
-export const UnorderedList = styled("ul", {
-    display: "flex",
-    justifyContent: "space-around",
-    alignItems: "center",
-    height: "100%",
-    padding: "0px 40px"
-});
-
-export const ListItems = styled("li", {
-    listStyle: "none",
-});

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { HomeContainer } from "../styles/pages/home";
+import { Container } from "../styles/pages";
 
 import { ButtonCTA } from "../styles/buttons";
 import {
@@ -21,7 +21,7 @@ export default function Cta() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <HomeContainer>
+      <Container>
         <GlassMorphism>
           <TypographyH1>Parabéns!</TypographyH1>
         </GlassMorphism>
@@ -41,7 +41,7 @@ export default function Cta() {
           <TypographyBtn>Ver todas universidades</TypographyBtn>
           <ArrowIcon size={22} color="#1A132B" />
         </ButtonCTA>
-      </HomeContainer>
+      </Container>
     </>
   );
 }

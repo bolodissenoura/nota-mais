@@ -18,7 +18,9 @@ export const {
       purple300: "#7F45FF",
       purple400: "#2C1363",
       purple900: "#1A132B",
+
       white: "#fff",
+      
       gray300: "#c4c4cc",
       gray100: "#e1e1e6",
 
