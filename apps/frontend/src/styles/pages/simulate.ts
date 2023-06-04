@@ -11,12 +11,14 @@ export const SimulateContainer = styled("div", {
 });
 
 export const InputNota = styled("input", {
-  width: "134px",
+  width: "100px",
   height: "44px",
-  background: "linear-gradient(90deg, #1A132B 2.32%, #1A132B 107.7%);",
+  fontSize: "1.2em",
+  background: "none",
   border: "1px solid #15D15B",
   color: "$purple50",
   textAlign: "center",
   borderRadius: "8px",
-  transition: "0.5s ease-out"
+  transition: "0.5s ease-out",
+  fontWeight: "300"
 });

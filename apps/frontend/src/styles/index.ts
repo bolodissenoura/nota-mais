@@ -19,6 +19,8 @@ export const {
       purple400: "#2C1363",
       purple900: "#1A132B",
 
+      gradientPrimary: "linear-gradient(180deg, rgba(149,0,173,1) 0%, rgba(119,0,138,1) 100%)",
+
       white: "#fff",
       
       gray300: "#c4c4cc",
@@ -29,16 +31,17 @@ export const {
     },
 
     fontSizes: {
-      sm: "0.857rem",
-      md: "1.25rem",
-      lg: "1.5rem",
-      xl: "3rem",
-      "2xl": "2rem",
+      sm: "0.857em",
+      md: "1em",
+      lg: "1.5em",
+      xl: "2em",
+      "2xl": "3.5em",
     },
+
     media: {
-      bp1: "(min-width: 640px)",
-      bp2: "(min-width: 768px)",
-      bp3: "(min-width: 1024px)",
+      sm: "(min-width: 640px)",
+      md: "(min-width: 768px)",
+      lg: "(min-width: 1024px)",
     },
   },
 });

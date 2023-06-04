@@ -1,7 +1,7 @@
 import Head from "next/head";
 import router from "next/router";
-import { ButtonCTA } from "../styles/buttons";
-import { TypographyH1 } from "../styles/typography";
+import { Button, ButtonCTA } from "../styles/buttons";
+import { TypographyH2 } from "../styles/typography";
 import { SectionContainer } from "../styles/pages";
 
 export default function Home() {
@@ -15,12 +15,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <SectionContainer>
-        <TypographyH1>
+        <TypographyH2>
           Veja em quais universidades você seria aprovado!
-        </TypographyH1>
-        <ButtonCTA onClick={() => router.push("/simulate")}>
-          Simular minha nota agora
-        </ButtonCTA>
+        </TypographyH2>
+        <Button btn='primary' onClick={() => router.push("/simulate")}>
+          Simular agora
+        </Button>
       </SectionContainer>
     </>
   );

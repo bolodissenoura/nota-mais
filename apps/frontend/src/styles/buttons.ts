@@ -6,7 +6,7 @@ export const ButtonCTA = styled("button", {
   alignItems: "center",
   textAlign: "center",
   gap: "4px",
-  width: "100%",
+  padding: "20px",
   height: "3.5rem",
   borderRadius: "2.18rem",
   border: "none",
@@ -24,7 +24,7 @@ export const ButtonCTA = styled("button", {
 
 export const ButtonForm = styled("button", {
   width: "100%",
-  height: "3.5rem",
+  padding: "20px",
   borderRadius: "2.18rem",
   border: "none",
   marginTop: "15px",
@@ -40,3 +40,32 @@ export const ButtonForm = styled("button", {
     cursor: "pointer",
   },
 });
+
+export const Button = styled("p", {
+  padding: "20px 50px",
+  borderRadius: "50px",
+  transition: "0.3s ease-out",
+  textTransform: "uppercase",
+  textDecoration: "none",
+
+  "&:hover": {
+    cursor: "pointer",
+    transform: "scale(1.05)"
+  },
+
+  variants: {
+    btn: {
+      primary: {
+        background: "$gradientPrimary",
+        boxShadow: "0 4px 30px rgba(44, 0, 66, 0.5)"
+      },
+      secondary: {
+        border: "1px solid white",
+      },
+      cta: {
+        background: "$gradientPrimary",
+        boxShadow: "0 4px 30px rgba(44, 0, 66, 0.5)"
+      }
+    }
+  }
+})
