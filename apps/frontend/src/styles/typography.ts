@@ -1,7 +1,7 @@
 import { styled } from ".";
 
 export const TypographyH1 = styled("h1", {
-  color: "$purple50",
+  color: "$textLight",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",

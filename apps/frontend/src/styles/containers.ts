@@ -5,5 +5,6 @@ export const MainContainer = styled("main", {
   minHeight: "100%",
   display: "flex",
   flexDirection: "column",
+  alignItems: "center",
   gap: "100px"
 });

@@ -1,4 +1,13 @@
-import { styled } from ".";
+import { styled, keyframes } from ".";
+
+const FloatingFrame = keyframes({
+  "0%": {
+    transform: "translateY(0px)",
+  },
+  "100%": {
+    transform: "translateY(20px)",
+  }
+})
 
 export const ButtonCTA = styled("button", {
   display: "flex",
@@ -24,12 +33,12 @@ export const ButtonCTA = styled("button", {
 
 export const ButtonForm = styled("button", {
   width: "100%",
+  color: "white",
   padding: "20px",
   borderRadius: "2.18rem",
   border: "none",
   marginTop: "15px",
-  background: "linear-gradient(90deg, #15D15B 2.32%, #07A442 107.7%)",
-  color: "$purple400",
+  background: "gray",
   textAlign: "center",
   fontSize: "$md",
   display: "flex",
@@ -37,16 +46,16 @@ export const ButtonForm = styled("button", {
   justifyContent: "center",
   alignItems: "center",
   "&:hover": {
-    cursor: "pointer",
+    cursor: "not-allowed",
   },
 });
 
 export const Button = styled("p", {
-  padding: "20px 50px",
-  borderRadius: "50px",
+  padding: "30px 50px",
+  borderRadius: "20px",
   transition: "0.3s ease-out",
-  textTransform: "uppercase",
   textDecoration: "none",
+  animation: "${FloatingFrame} 1s infinite ease-in-out alternate",
 
   "&:hover": {
     cursor: "pointer",
@@ -57,7 +66,8 @@ export const Button = styled("p", {
     btn: {
       primary: {
         background: "$gradientPrimary",
-        boxShadow: "0 4px 30px rgba(44, 0, 66, 0.5)"
+        boxShadow: "0px 0px 70px 10px rgba(255,0,136,0.3)",
+        fontWeight: "bold"
       },
       secondary: {
         border: "1px solid white",
@@ -66,6 +76,6 @@ export const Button = styled("p", {
         background: "$gradientPrimary",
         boxShadow: "0 4px 30px rgba(44, 0, 66, 0.5)"
       }
-    }
+    },
   }
 })

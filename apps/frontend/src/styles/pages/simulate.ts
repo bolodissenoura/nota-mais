@@ -11,7 +11,7 @@ export const SimulateContainer = styled("div", {
 });
 
 export const InputNota = styled("input", {
-  width: "100px",
+  width: "120px",
   height: "44px",
   fontSize: "1.2em",
   background: "none",

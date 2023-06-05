@@ -1,26 +1,24 @@
 import { globalCss } from ".";
+import Background from "../../public/background.jpg"
 
 export const globalStyles = globalCss({
   "*": {
     margin: 0,
     padding: 0,
-    fontFamily: "Outfit",
   },
 
   body: {
     "-webkit-font-smoothing": "antialiasad",
     backgroundColor: "$purple900",
-    color: "$gray100",
-    padding: " 0px 5%",
+    color: "$text",
     minHeight: "100vh",
     fontWeight: "300",
-    fontFamily: "Outfit",
-    fontSize: "22px",
+    fontFamily: "Montserrat",
+    fontSize: "18px",
     overflowX: "hidden",
-  },
-
-  "button, h1, h2": {
-    letterSpacing: "-2%",
+    backgroundImage: `url("https://i.imgur.com/7nerf0E_d.webp?maxwidth=760&fidelity=grand")`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover"
   },
 
   a: {
@@ -28,8 +26,8 @@ export const globalStyles = globalCss({
     color: "inherit"
   },
 
-  p: {
-    
-  }
+  "#__next": {
+    padding: "0px 10%"
+  },
   
 });
