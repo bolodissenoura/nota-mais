@@ -2,7 +2,7 @@ import { styled, keyframes } from "../../../stitches.config";
 
 export const ShadowBlurTop = styled("span", {
   position: "absolute",
-  width: "700px",
+  // width: "700px",
   height: "600px",
   left: "0px",
   top: "-0px",
