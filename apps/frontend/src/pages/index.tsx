@@ -1,6 +1,6 @@
 import Head from "next/head";
 import router from "next/router";
-import { Button, ButtonCTA } from "../styles/buttons";
+import { Button } from "../styles/buttons";
 import { TypographyH2 } from "../styles/typography";
 import { SectionContainer } from "../styles/pages";
 
