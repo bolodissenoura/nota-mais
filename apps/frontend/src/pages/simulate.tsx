@@ -7,13 +7,17 @@ import { FlexGrid } from "../styles/grid";
 
 import Select from "react-select";
 import { useForm, Controller } from "react-hook-form";
+import React from "react";
+import Router from "next/router";
 
 export default function Simulate() {
-  const { register, handleSubmit, control } = useForm();
-
+  const { register, handleSubmit, control, formState } = useForm({
+    mode: "onChange",
+  });
   function registerLead(data: any) {
     console.log(data);
   }
+
   const options = [
     { value: "1", label: "Engenharia de Computação" },
     { value: "2", label: "Engenharia de Produção" },
@@ -43,7 +47,7 @@ export default function Simulate() {
         <TypographyH2>Selecione seu curso</TypographyH2>
         <Controller
           control={control}
-          defaultValue={options.map((c) => c.value)}
+          defaultValue={[]}
           name="options"
           render={({ field: { onChange, value, ref } }: any) => (
             <Select
@@ -57,12 +61,6 @@ export default function Simulate() {
             />
           )}
         />
-        {/* <Select
-          styles={CustomStyle}
-          className="mt select"
-          options={options}
-          {...register("LC")}
-        /> */}
         <TypographyH2 className="mt">Digite suas notas</TypographyH2>
         <FlexGrid>
           <TypographyP2>Linguagens e Códigos</TypographyP2>
@@ -84,7 +82,12 @@ export default function Simulate() {
           <TypographyP2>Redação</TypographyP2>
           <InputNota {...register("RD")} />
         </FlexGrid>
-        <ButtonForm>Prosseguir</ButtonForm>
+        {formState.errors.firstName && <p>This is required</p>}
+        <ButtonForm
+          onClick={() => Router.push("/cta")}
+          disabled={!formState.isValid}>
+          Prosseguir
+        </ButtonForm>
       </SimulateContainer>
     </>
   );
