@@ -46,8 +46,7 @@ const Item = styled("li", {
         selected: {
             true: {
                 color: "white",
-                fontWeight: "400",
-                backgroundColor: "#78008b"
+                background: "$gradientPrimary"
             },
             false: {
                 border: "none"
@@ -56,21 +55,32 @@ const Item = styled("li", {
     }
 })
 
+
+
 const NavbarComponent = () => {
     
-    const [selectedPage, SetSelectedPage] = useState<boolean>(true)
+    const [selectedPageHome, SetSelectedPageHome] = useState<boolean>(false)
+    const [selectedPageSimulater, SetSelectedPageSimulater] = useState<boolean>(true)
 
     const SelectPage = () => {
-        
+        if(selectedPageHome) {
+            SetSelectedPageHome(false);
+            SetSelectedPageSimulater(true);
+            router.push("/")
+        } else {
+            SetSelectedPageHome(true);
+            SetSelectedPageSimulater(false);
+            router.push("/home")
+        }
     }
 
     return (
         <Navbar>
             <NavigationContainer>
                 <UnorderedList>
-                    <Item onClick={() => router.push("/home")} selected={selectedPage}>inicio</Item>
+                    <Item onClick={SelectPage} selected={selectedPageHome}>nota mais</Item>
                     <Divisor />
-                    <Item onClick={() => router.push("/")}>simulador</Item>
+                    <Item onClick={SelectPage} selected={selectedPageSimulater}>simulador</Item>
                 </UnorderedList>
             </NavigationContainer>
         </Navbar>

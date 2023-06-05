@@ -1,7 +1,8 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { getCssText } from "../styles";
+import { getCssText, styled } from "../styles";
 
 export default function Document() {
+
   return (
     <Html lang="pt-br">
       <Head>
@@ -21,7 +22,7 @@ export default function Document() {
           dangerouslySetInnerHTML={{ __html: getCssText() }}
         />
       </Head>
-      <body>
+      <body className="background">
         <Main />
         <NextScript />
       </body>

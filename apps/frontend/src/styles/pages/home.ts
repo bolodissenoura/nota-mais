@@ -1,82 +1,76 @@
-import { styled } from "..";
+import Image from "next/image";
+import { styled, keyframes } from "..";
 import { TypographyH1, TypographyP1 } from "../typography";
 
+const floating = keyframes({
+    "0%": {
+        transform: "translateY(20px)"
+    },
+    "100%": {
+        transform: "translateY(0px)"
+    }
+})
+
 export const Title = styled(TypographyH1, {
-    fontSize: "$2xl"
+    fontSize: "$2xl",
 })
 
 export const Subtitle = styled(TypographyP1, {
-    textTransform: "uppercase",
-    color: "$purple100",
     fontSize: "$md",
     fontWeight: "500"
 })
 
+export const SpanPink = styled("span", {
+    color: "$primary",
+    fontWeight: "bold"
+})
+
 export const FirstSectionContainer = styled("section", {
     width: "100%",
-    minHeight: "80vh",
     display: "flex",
     flexWrap: "wrap",
-    justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    gap: "40px"
 })
 
 export const SecondSectionContainer = styled("section", {
-    textAlign: "center",
+    width: "100%",
     display: "flex",
     flexDirection: "column",
     gap: "20px",
+    marginBottom: "150px",
 })
 
 export const ContainerRight = styled("div", {
-    maxWidth: "720px",
+    maxWidth: "820px",
+    width: "60%",
     minWidth: "280px",
     display: "flex",
     flexDirection: "column",
     textAlign: "start",
     justifyContent: "center",
-    gap: "20px",
+    gap: "20px"
 })
 
 export const ContainerLeft = styled("div", {
     width: "40%",
-    minWidth: "280px",
+    display: "flex",
+    alignContent: "end"
 })
 
 export const ContainerButtons = styled("div", {
     display: "flex",
     gap: "20px",
-    textAlign: "center", 
-    marginTop: "20px",
+    textAlign: "center",
+    marginTop: "30px",
 })
 
-export const ContainerFlex = styled("div", {
-    display: "flex",
-
+export const ElementFloating = styled(Image, {
+    width: "65%",
+    height: "100%",
+    animation: `${floating} 1s infinite ease-in-out alternate`,
 })
 
-export const FirstCard = styled("div", {
-    display: "flex",
-    padding: "30px",
-    flexDirection: "column",
-    maxWidth: "550px",
-    width: "100%",
-    minWidth: "280px",
-    height: "230px",
-    background: "$gradientPrimary",
-    borderRadius: "30px",
-    boxShadow: "0 4px 30px rgba(44, 0, 66, 0.5)"
-})
+export const ContainerItems = styled("div", {
 
-export const CardTitle = styled("p", {
-    fontSize: "$xl",
-    fontWeight: "bold"
-})
-
-export const CardParagraph = styled("p", {
-
-})
-
-export const CardFlex = styled("div", {
-    
 })

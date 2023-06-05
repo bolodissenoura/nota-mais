@@ -59,10 +59,7 @@ export default function Simulate() {
           <TypographyP2>Redação</TypographyP2>
           <InputNota />
         </FlexGrid>
-        <ButtonForm>
-          <Image src={unlockICO} alt="" />
-          Prosseguir
-        </ButtonForm>
+        <ButtonForm>Prosseguir</ButtonForm>
       </SimulateContainer>
     </>
   );
