@@ -4,31 +4,32 @@ export const globalStyles = globalCss({
   "*": {
     margin: 0,
     padding: 0,
+    fontFamily: "Outfit",
   },
 
   body: {
     "-webkit-font-smoothing": "antialiasad",
     backgroundColor: "$purple900",
     color: "$gray100",
-  },
-
-  "body, input, textarea,": {
+    padding: " 0px 5%",
+    minHeight: "100vh",
+    fontWeight: "300",
     fontFamily: "Outfit",
-    fontWeight: 400,
+    fontSize: "22px",
+    overflowX: "hidden",
   },
 
   "button, h1, h2": {
-    fontFamily: "Outfit",
-    fontWeight: 600,
     letterSpacing: "-2%",
   },
 
+  a: {
+    textDecoration: "none",
+    color: "inherit"
+  },
+
   p: {
-    fontFamily: "Outfit",
-    fontWeight: 300,
-  },
-  ".select": {
-    fontFamily: "Outfit",
-    fontWeight: 400,
-  },
+    
+  }
+  
 });

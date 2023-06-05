@@ -1,29 +1,23 @@
-import { styled } from "..";
+import { styled, keyframes } from "..";
 
-export const Container = styled("div", {
-  width: "100%",
-  height: "100vh",
-  overflow: "hidden",
-});
+const move = keyframes({
+  "0%": {
+    transform: "translateX(0)"
+  },
 
-export const ShadowBlurTop = styled("div", {
+  "100%": {
+    transform: "translateX(150vw)"
+  }
+})
+
+export const ShadowBlurTop = styled("span", {
   position: "absolute",
-  width: "694px",
-  height: "577px",
-  left: "-431px",
-  top: "-443px",
+  width: "700px",
+  height: "600px",
+  left: "-1000px",
+  top: "-500px",
   background: "#4C1AEE",
   opacity: 0.5,
   filter: "blur(150px)",
-});
-
-export const ShadowBlurBottom = styled("div", {
-  position: "relative",
-  width: "694px",
-  height: "577px",
-  left: "141px",
-  top: "103px",
-  background: "#4C1AEE",
-  opacity: 0.5,
-  filter: "blur(150px)",
+  animation: `${move} 15s linear infinite`
 });

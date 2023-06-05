@@ -1,20 +1,19 @@
-import type { AppProps } from "next/app";
 import { globalStyles } from "../styles/global";
 
-import {
-  Container,
-  ShadowBlurBottom,
-  ShadowBlurTop,
-} from "../styles/pages/app";
+import { ShadowBlurTop } from "../styles/pages/app";
+import { MainContainer } from "../styles/containers";
+import NavbarComponent from "../styles/navbar";
 
 globalStyles();
 
 export default function App({ Component, pageProps }: any) {
   return (
-    <Container>
+    <>
+      <NavbarComponent />
+      <MainContainer>
+        <Component {...pageProps} />
+      </MainContainer>
       <ShadowBlurTop />
-      <Component {...pageProps} />
-      <ShadowBlurBottom />
-    </Container>
+    </>
   );
 }

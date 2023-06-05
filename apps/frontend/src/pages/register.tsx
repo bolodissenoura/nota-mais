@@ -1,12 +1,14 @@
 import Head from "next/head";
-
+import ArrowIcon from "../assets/icons/arrowIcon";
+import { FlexGrid } from "../styles/grid";
+import { useForm } from "react-hook-form";
+import { useState } from "react";
 import { ButtonCTA } from "../styles/buttons";
 import {
   TypographyBtn,
   TypographyH2,
   TypographyP1,
 } from "../styles/typography";
-import { FlexGrid } from "../styles/grid";
 
 import {
   Form,
@@ -15,9 +17,6 @@ import {
   InputPhone,
   RegisterContainer,
 } from "../styles/pages/register";
-import ArrowIcon from "../assets/icons/arrowIcon";
-import { useForm } from "react-hook-form";
-import { useState } from "react";
 
 export default function Register() {
   const [output, setOutput] = useState("");

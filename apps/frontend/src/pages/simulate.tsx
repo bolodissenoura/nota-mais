@@ -14,7 +14,11 @@ export default function Simulate() {
     { value: "1", label: "Engenharia de Computação" },
     { value: "2", label: "Engenharia de Produção" },
     { value: "3", label: "Engenharia Elétrica" },
+    { value: "4", label: "Fármacia" },
+    { value: "5", label: "Quimica" },
+    { value: "6", label: "Zootecnia" },
   ];
+
   const CustomStyle = {
     option: (base: any, state: { isSelected: any }) => ({
       ...base,
@@ -55,7 +59,7 @@ export default function Simulate() {
           <TypographyP2>Redação</TypographyP2>
           <InputNota />
         </FlexGrid>
-        <ButtonForm css={{ margin: "50px auto 0 12px" }}>
+        <ButtonForm>
           <Image src={unlockICO} alt="" />
           Prosseguir
         </ButtonForm>
