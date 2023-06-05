@@ -1,4 +1,4 @@
-import { styled } from ".";
+import { styled } from "../../stitches.config";
 
 export const MainContainer = styled("main", {
   width: "100%",

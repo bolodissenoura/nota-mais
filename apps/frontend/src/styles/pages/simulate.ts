@@ -1,4 +1,4 @@
-import { styled } from "..";
+import { styled } from "../../../stitches.config";
 
 export const SimulateContainer = styled("div", {
   height: "100%",
@@ -7,7 +7,7 @@ export const SimulateContainer = styled("div", {
   margin: "auto",
   display: "flex",
   flexDirection: "column",
-  gap: "20px"
+  gap: "20px",
 });
 
 export const InputNota = styled("input", {
@@ -20,5 +20,5 @@ export const InputNota = styled("input", {
   textAlign: "center",
   borderRadius: "8px",
   transition: "0.5s ease-out",
-  fontWeight: "300"
+  fontWeight: "300",
 });

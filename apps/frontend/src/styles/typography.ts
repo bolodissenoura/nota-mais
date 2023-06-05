@@ -1,11 +1,14 @@
-import { styled } from ".";
+import { styled } from "../../stitches.config";
 
 export const TypographyH1 = styled("h1", {
-  color: "$textLight",
+  color: "$purple50",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   fontSize: "$xl",
+  "@bp2": {
+    color: "blue",
+  },
 });
 
 export const TypographyH2 = styled("h2", {
@@ -16,10 +19,6 @@ export const TypographyH2 = styled("h2", {
   alignItems: "left",
   fontSize: "$lg",
   textTransform: "none",
-
-  '@sm': {
-    fontSize: "$md"
-  }
 });
 
 export const TypographyBtn = styled("p", {

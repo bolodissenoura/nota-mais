@@ -1,6 +1,6 @@
 import router from "next/router";
 import { useState } from "react";
-import { styled } from ".";
+import { styled } from "../../stitches.config";
 
 interface ItemPageProps {
     selected: "true" | "false"

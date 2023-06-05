@@ -1,4 +1,4 @@
-import { styled, keyframes } from "..";
+import { styled, keyframes } from "../../../stitches.config";
 
 export const ShadowBlurTop = styled("span", {
   position: "absolute",

@@ -1,4 +1,4 @@
-import { styled, keyframes } from ".";
+import { styled, keyframes } from "../../stitches.config";
 
 const FloatingFrame = keyframes({
   "0%": {

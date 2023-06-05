@@ -25,7 +25,7 @@ export const {
       gray100: "#e1e1e6",
       green500: "#4FE35E",
       green300: "#00b37e",
-      
+
       gradientPrimary: "linear-gradient(180deg, $primary 0%, #980063 100%)",
     },
 
@@ -38,9 +38,9 @@ export const {
     },
 
     media: {
-      sm: "(min-width: 640px)",
-      md: "(min-width: 768px)",
-      lg: "(min-width: 1024px)",
+      bp1: "(min-width: 640px)",
+      bp2: "(min-width: 768px)",
+      bp3: "(min-width: 1024px)",
     },
   },
 });

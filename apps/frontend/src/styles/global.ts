@@ -1,4 +1,4 @@
-import { globalCss } from ".";
+import { globalCss } from "../../stitches.config";
 
 export const globalStyles = globalCss({
   "*": {
@@ -12,21 +12,29 @@ export const globalStyles = globalCss({
     color: "$text",
     minHeight: "100vh",
     fontWeight: "300",
-    fontFamily: 'Montserrat, sans-serif',
+    fontFamily: "Montserrat, sans-serif",
     fontSize: "18px",
     overflowX: "hidden",
     backgroundImage: `url("https://i.imgur.com/7nerf0E_d.webp?maxwidth=760&fidelity=grand")`,
     backgroundRepeat: "no-repeat",
-    backgroundSize: "cover"
+    backgroundSize: "cover",
   },
 
   a: {
     textDecoration: "none",
-    color: "inherit"
+    color: "inherit",
   },
 
   "#__next": {
-    padding: "0px 10%"
+    padding: "0px 10%",
   },
-  
+  "@media (prefers-reduced-motion: reduce)": {
+    "html:focus-within": { scrollBehavior: "auto" },
+    "*, *::before, *::after": {
+      animationDuration: "0.01ms !important",
+      animationIterationCount: "1 !important",
+      transitionDuration: "0.01ms !important",
+      scrollBehavior: "auto !important",
+    },
+  },
 });

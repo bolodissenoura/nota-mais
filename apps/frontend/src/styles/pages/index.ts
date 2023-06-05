@@ -1,4 +1,4 @@
-import { styled } from "..";
+import { styled } from "../../../stitches.config";
 
 export const SectionContainer = styled("section", {
   width: "80%",
