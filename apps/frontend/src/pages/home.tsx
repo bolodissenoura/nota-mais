@@ -16,6 +16,7 @@ import { Button } from "../styles/buttons"
 import Hero from "../assets/astronauta-flutuando.png"
 import Image from "next/image"
 import Planet from "../assets/planeta.png"
+import HeroItem from "../styles/HeroItem"
 
 
 const Homepage = () => {
@@ -39,13 +40,14 @@ const Homepage = () => {
             <Button btn='secondary'>Como funciona?</Button>
           </ContainerButtons>
           <ContainerItems>
-
+            <HeroItem title="4.7" description="Avaliações" />
           </ContainerItems>
         </ContainerRight>
         <ContainerLeft>
           <ElementFloating
             src={Hero}
             alt="Mulher segurando livro"
+            style={{margin: 'auto'}}
           />
         <Image 
             src={Planet}

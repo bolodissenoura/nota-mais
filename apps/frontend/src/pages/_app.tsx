@@ -2,7 +2,7 @@ import { globalStyles } from "../styles/global";
 
 import { ShadowBlurTop } from "../styles/pages/app";
 import { MainContainer } from "../styles/containers";
-import NavbarComponent from "../styles/navbar";
+import NavbarComponent from "../styles/Navbar";
 
 globalStyles();
 

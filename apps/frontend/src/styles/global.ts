@@ -1,5 +1,4 @@
 import { globalCss } from ".";
-import Background from "../../public/background.jpg"
 
 export const globalStyles = globalCss({
   "*": {
@@ -13,7 +12,7 @@ export const globalStyles = globalCss({
     color: "$text",
     minHeight: "100vh",
     fontWeight: "300",
-    fontFamily: "Montserrat",
+    fontFamily: 'Montserrat, sans-serif',
     fontSize: "18px",
     overflowX: "hidden",
     backgroundImage: `url("https://i.imgur.com/7nerf0E_d.webp?maxwidth=760&fidelity=grand")`,

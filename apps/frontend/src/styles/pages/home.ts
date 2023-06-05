@@ -42,9 +42,7 @@ export const SecondSectionContainer = styled("section", {
 })
 
 export const ContainerRight = styled("div", {
-    maxWidth: "820px",
-    width: "60%",
-    minWidth: "280px",
+    maxWidth: "700px",
     display: "flex",
     flexDirection: "column",
     textAlign: "start",
@@ -72,5 +70,5 @@ export const ElementFloating = styled(Image, {
 })
 
 export const ContainerItems = styled("div", {
-
+    display: "flex",
 })
