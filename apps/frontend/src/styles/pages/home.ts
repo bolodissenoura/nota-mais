@@ -4,7 +4,7 @@ import { TypographyH1, TypographyP1 } from "../typography";
 
 const floating = keyframes({
   "0%": {
-    transform: "translateY(20px)",
+    transform: "translateY(10px)",
   },
   "100%": {
     transform: "translateY(0px)",
@@ -12,17 +12,19 @@ const floating = keyframes({
 });
 
 export const Title = styled(TypographyH1, {
-  fontSize: "$2xl",
+  fontSize: "$xl",
+  lineHeight: "1.4em"
 });
 
 export const Subtitle = styled(TypographyP1, {
-  fontSize: "$md",
+  fontSize: "$sm",
   fontWeight: "500",
 });
 
-export const SpanPink = styled("span", {
-  color: "$primary",
+export const Span = styled("span", {
+  color: "$text",
   fontWeight: "bold",
+  fontSize: "$lg"
 });
 
 export const FirstSectionContainer = styled("section", {
@@ -30,7 +32,6 @@ export const FirstSectionContainer = styled("section", {
   display: "flex",
   flexWrap: "wrap",
   alignItems: "center",
-  gap: "40px",
 });
 
 export const SecondSectionContainer = styled("section", {
@@ -42,33 +43,44 @@ export const SecondSectionContainer = styled("section", {
 });
 
 export const ContainerRight = styled("div", {
-  maxWidth: "700px",
+  width: "100%",
   display: "flex",
   flexDirection: "column",
   textAlign: "start",
   justifyContent: "center",
-  gap: "20px",
+  gap: "10px"
 });
 
 export const ContainerLeft = styled("div", {
-  width: "40%",
   display: "flex",
-  alignContent: "end",
+  width: "100%",
+  alignItems: "end",
 });
 
 export const ContainerButtons = styled("div", {
   display: "flex",
+  width: "100%",
   gap: "20px",
   textAlign: "center",
-  marginTop: "30px",
+  marginTop: "15px"
 });
 
 export const ElementFloating = styled(Image, {
-  width: "65%",
+  maxWidth: "200px",
   height: "100%",
   animation: `${floating} 1s infinite ease-in-out alternate`,
 });
 
 export const ContainerItems = styled("div", {
   display: "flex",
+  width: "100%",
+  margin: "25px 0px 50px 0px",
+  justifyContent: "space-between",
+  alignItems: "center"
 });
+
+export const SpanDivisor = styled("span", {
+  border: "1px solid white",
+  opacity: "30%",
+  height: "30px"
+})

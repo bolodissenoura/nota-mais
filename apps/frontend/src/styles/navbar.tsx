@@ -7,7 +7,7 @@ interface ItemPageProps {
 }
 
 const Navbar = styled("header", {
-    padding: "30px",
+    paddingBottom: "10px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",

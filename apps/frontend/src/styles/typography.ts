@@ -7,7 +7,7 @@ export const TypographyH1 = styled("h1", {
   justifyContent: "center",
   fontSize: "$xl",
   "@bp2": {
-    color: "blue",
+    color: "inherit",
   },
 });
 

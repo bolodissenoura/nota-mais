@@ -51,7 +51,8 @@ export const ButtonForm = styled("button", {
 });
 
 export const Button = styled("p", {
-  padding: "30px 50px",
+  padding: "1em",
+  fontSize: "$md",
   borderRadius: "20px",
   transition: "0.3s ease-out",
   textDecoration: "none",

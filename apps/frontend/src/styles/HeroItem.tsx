@@ -1,35 +1,36 @@
 import React from 'react'
-import Icon from '../assets/star.png'
 import Image from 'next/image'
+import type { StaticImageData } from 'next/image'
 import { styled } from '@stitches/react'
 
 type Props = {
     title: string;
     description: string;
+    icon: StaticImageData;
 }
 
 const HeroItem = (props: Props) => {
 
   const ContainerFlexItem = styled("div", {
-    width: "320px",
-    height: "120px",
+    width: "100%",
+    maxWidth: "150px",
     display: "flex",
-    
   })
 
   const ContainerLeft = styled("div", {
-
+    
   })
 
   const ContainerRight = styled("div", {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    flexDirection: "column"
+    flexDirection: "column",
+    width: "100%"
   })
 
   const Title = styled("p", {
-    fontSize: '$lg',
+    fontSize: '$xl',
     fontWeight: 'bold'
   })
 
@@ -37,9 +38,9 @@ const HeroItem = (props: Props) => {
     <ContainerFlexItem>
       <ContainerLeft>
         <Image 
-          src={Icon}
+          src={props.icon}
           alt='Estrela'
-          width='100'
+          width={50}
         />
       </ContainerLeft>
       <ContainerRight>

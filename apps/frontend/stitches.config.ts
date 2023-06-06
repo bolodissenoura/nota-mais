@@ -30,7 +30,7 @@ export const {
     },
 
     fontSizes: {
-      sm: "0.857em",
+      sm: "0.8em",
       md: "1em",
       lg: "1.5em",
       xl: "2em",
