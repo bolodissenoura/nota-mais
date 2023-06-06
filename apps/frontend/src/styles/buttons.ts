@@ -59,6 +59,10 @@ export const Button = styled("p", {
   textDecoration: "none",
   animation: "${FloatingFrame} 1s infinite ease-in-out alternate",
 
+  "@bp1": {
+    padding: "1.5em 2em"
+  },
+
   "&:hover": {
     cursor: "pointer",
     transform: "scale(1.05)",
@@ -68,7 +72,7 @@ export const Button = styled("p", {
     btn: {
       primary: {
         background: "$gradientPrimary",
-        boxShadow: "0px 0px 70px 10px rgba(255,0,136,0.3)",
+        boxShadow: "0px 0px 70px 10px rgba(255,0,136, 0.5)",
         fontWeight: "bold",
       },
       secondary: {

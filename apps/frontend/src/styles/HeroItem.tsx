@@ -13,7 +13,7 @@ const HeroItem = (props: Props) => {
 
   const ContainerFlexItem = styled("div", {
     width: "100%",
-    maxWidth: "150px",
+    maxWidth: "250px",
     display: "flex",
   })
 
@@ -30,7 +30,7 @@ const HeroItem = (props: Props) => {
   })
 
   const Title = styled("p", {
-    fontSize: '$xl',
+    fontSize: '$lg',
     fontWeight: 'bold'
   })
 
@@ -40,7 +40,6 @@ const HeroItem = (props: Props) => {
         <Image 
           src={props.icon}
           alt='Estrela'
-          width={50}
         />
       </ContainerLeft>
       <ContainerRight>

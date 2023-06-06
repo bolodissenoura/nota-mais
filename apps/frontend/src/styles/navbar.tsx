@@ -11,7 +11,11 @@ const Navbar = styled("header", {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    fontSize: "$sm"
+    fontSize: "$sm",
+
+    "@bp1": {
+        fontSize: "$md",
+    }
 })
 
 const NavigationContainer = styled("nav", {
@@ -38,7 +42,7 @@ const Divisor = styled("span", {
 
 const Item = styled("li", {
     cursor: "pointer",
-    padding: "10px 30px",
+    padding: "10px 20px",
     borderRadius: "10px",
     transition: "0.3s ease-out",
 

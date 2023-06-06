@@ -11,8 +11,8 @@ export const globalStyles = globalCss({
     backgroundColor: "$purple900",
     color: "$text",
     minHeight: "100vh",
-    padding: "25px",
     fontWeight: "300",
+    padding: "30px",
     fontFamily: "Montserrat, sans-serif",
     fontSize: "16px",
     overflowX: "hidden",
@@ -34,4 +34,5 @@ export const globalStyles = globalCss({
       scrollBehavior: "auto !important",
     },
   },
+
 });

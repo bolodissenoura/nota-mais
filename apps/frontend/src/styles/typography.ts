@@ -13,9 +13,6 @@ export const TypographyH1 = styled("h1", {
 
 export const TypographyH2 = styled("h2", {
   color: "$purple50",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
   alignItems: "left",
   fontSize: "$lg",
   textTransform: "none",

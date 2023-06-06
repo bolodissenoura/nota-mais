@@ -1,14 +1,13 @@
 import { styled } from "../../../stitches.config";
 
 export const SectionContainer = styled("section", {
-  width: "80%",
+  width: "100%",
   maxWidth: "520px",
   display: "flex",
   flexDirection: "column",
-  gap: "30px",
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  textAlign: "center"
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "20px",
+  textAlign: "center",
+  height: "80vh"
 });

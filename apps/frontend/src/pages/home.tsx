@@ -1,17 +1,19 @@
 import Head from "next/head";
 import Link from "next/link";
 import {
-  FirstSectionContainer,
+  FirstSection,
   ContainerRight,
   ContainerLeft,
   Subtitle,
   Title,
   ContainerButtons,
-  SecondSectionContainer,
+  SecondSection,
   ElementFloating,
   Span,
   ContainerItems,
   SpanDivisor,
+  ThirdSection,
+  GlassItemsContainer,
 } from "../styles/pages/home";
 import { Button } from "../styles/buttons";
 import Hero from "../assets/astronauta-flutuando.png";
@@ -20,6 +22,9 @@ import Planet from "../assets/planeta.png";
 import HeroItem from "../styles/HeroItem";
 import IconStar from '../assets/star.png'
 import IconBaloon from "../assets/balao-aprovacoes.png"
+import Mockup from "../assets/notamais-aplicativo-mockup.png"
+import GlassCard from "../styles/GlassCard";
+import ItemComponent from "../styles/ItemComponent";
 
 const Homepage = () => {
   return (
@@ -30,16 +35,12 @@ const Homepage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <FirstSectionContainer>
+
+      <FirstSection>
         <ContainerLeft>
-          <ElementFloating
-            src={Hero}
-            alt="Mulher segurando livro"
-            style={{ margin: "auto" }}
-          />
+          <ElementFloating src={Hero} alt="Astronauta flutuando no espaço" />
           <Image
-            src={Planet}
-            style={{
+            src={Planet} alt="Planet" style={{
               position: "absolute",
               right: "0",
               top: "250px",
@@ -47,19 +48,18 @@ const Homepage = () => {
               height: "85vw",
               zIndex: "-1"
             }}
-            alt="Planet"
           />
         </ContainerLeft>
         <ContainerRight>
           <Subtitle>
-            O MELHOR SIMULADOR GRÁTIS DO <Span>SiSU 2023</Span>
+            SIMULADOR GRÁTIS DO <Span>SiSU 2023</Span>
           </Subtitle>
-          <Title>Simule sua nota em todas universidades federais do país</Title>
+          <Title>Veja em quantas universidades você passaria no ENEM</Title>
           <ContainerButtons>
             <Link href="/simulate">
-              <Button btn="primary">SIMULAR AGORA</Button>
+              <Button btn="primary">VER MINHAS APROVAÇÕES AGORA</Button>
             </Link>
-            <Button btn="secondary">Como funciona?</Button>
+            <Button btn="secondary">Oque é?</Button>
           </ContainerButtons>
           <ContainerItems>
             <HeroItem title="4.7" description="Avaliações" icon={IconStar} />
@@ -67,11 +67,31 @@ const Homepage = () => {
             <HeroItem title="927" description="Aprovações" icon={IconBaloon} />
           </ContainerItems>
         </ContainerRight>
-      </FirstSectionContainer>
-      <SecondSectionContainer>
-        <Title>Confira nossas novidades</Title>
-        <p>Todo sistema em nuvem pronto pra te atender</p>
-      </SecondSectionContainer>
+      </FirstSection>
+
+      <SecondSection>
+        <GlassItemsContainer>
+          <GlassCard title="Nota Mais" description="A melhor plataforma para estudantes simularem suas aprovações no Enem 2023 em apenas alguns segundos" />
+          <GlassCard title="Cálculo Imediato" description="Através do simulador você terá uma noção mais realista das chances de ser selecionado para seu curso desejado" />
+        </GlassItemsContainer>
+
+        <div style={{
+          width: "100%",
+          maxWidth: "540px",
+        }}>
+          <Image src={Mockup} alt="Mockup do aplicativo do Nota Mais" sizes="100vw" style={{
+            width: '90%',
+            height: 'auto',
+            maxWidth: '400px'
+          }}
+          />
+        </div>
+
+      </SecondSection>
+
+      <ThirdSection>
+          <ItemComponent title="Sim" description="description" />
+      </ThirdSection>
     </>
   );
 };
