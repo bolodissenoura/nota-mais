@@ -6,8 +6,8 @@ const FloatingFrame = keyframes({
   },
   "100%": {
     transform: "translateY(20px)",
-  }
-})
+  },
+});
 
 export const ButtonCTA = styled("button", {
   display: "flex",
@@ -27,7 +27,7 @@ export const ButtonCTA = styled("button", {
 
   "&:hover": {
     cursor: "pointer",
-    transform: "scale(1.1)"
+    transform: "scale(1.1)",
   },
 });
 
@@ -38,13 +38,14 @@ export const ButtonForm = styled("button", {
   borderRadius: "2.18rem",
   border: "none",
   marginTop: "15px",
-  background: "gray",
   textAlign: "center",
   fontSize: "$md",
   display: "flex",
   gap: "10px",
   justifyContent: "center",
   alignItems: "center",
+  backgroundColor: "$primary",
+
   "&:hover": {
     cursor: "not-allowed",
   },
@@ -60,7 +61,7 @@ export const Button = styled("p", {
 
   "&:hover": {
     cursor: "pointer",
-    transform: "scale(1.05)"
+    transform: "scale(1.05)",
   },
 
   variants: {
@@ -68,15 +69,15 @@ export const Button = styled("p", {
       primary: {
         background: "$gradientPrimary",
         boxShadow: "0px 0px 70px 10px rgba(255,0,136,0.3)",
-        fontWeight: "bold"
+        fontWeight: "bold",
       },
       secondary: {
         border: "1px solid white",
       },
       cta: {
         background: "$gradientPrimary",
-        boxShadow: "0 4px 30px rgba(44, 0, 66, 0.5)"
-      }
+        boxShadow: "0 4px 30px rgba(44, 0, 66, 0.5)",
+      },
     },
-  }
-})
+  },
+});

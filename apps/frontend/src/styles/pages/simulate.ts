@@ -1,6 +1,6 @@
 import { styled } from "../../../stitches.config";
 
-export const SimulateContainer = styled("div", {
+export const SimulateContainer = styled("form", {
   height: "100%",
   width: "100%",
   maxWidth: "440px",

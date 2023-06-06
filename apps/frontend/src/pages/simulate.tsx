@@ -1,15 +1,23 @@
 import Head from "next/head";
 
 import { ButtonForm } from "../styles/buttons";
-import { TypographyH2, TypographyP1, TypographyP2 } from "../styles/typography";
+import { TypographyH2, TypographyP2 } from "../styles/typography";
 import { InputNota, SimulateContainer } from "../styles/pages/simulate";
 import { FlexGrid } from "../styles/grid";
 
-import Image from "next/image";
-import unlockICO from "../assets/unlock.svg";
 import Select from "react-select";
+import { useForm, Controller } from "react-hook-form";
+import React from "react";
+import Router from "next/router";
 
 export default function Simulate() {
+  const { register, handleSubmit, control, formState } = useForm({
+    mode: "onChange",
+  });
+  function registerLead(data: any) {
+    console.log(data);
+  }
+
   const options = [
     { value: "1", label: "Engenharia de Computação" },
     { value: "2", label: "Engenharia de Produção" },
@@ -35,31 +43,51 @@ export default function Simulate() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <SimulateContainer>
+      <SimulateContainer onSubmit={handleSubmit(registerLead)}>
         <TypographyH2>Selecione seu curso</TypographyH2>
-        <Select styles={CustomStyle} className="mt select" options={options} />
+        <Controller
+          control={control}
+          defaultValue={[]}
+          name="options"
+          render={({ field: { onChange, value, ref } }: any) => (
+            <Select
+              // @ts-ignore
+              inputRef={ref}
+              styles={CustomStyle}
+              value={options.filter((c) => value.includes(c.value))}
+              onChange={(val) => onChange(val.map((c) => c.value))}
+              options={options}
+              isMulti
+            />
+          )}
+        />
         <TypographyH2 className="mt">Digite suas notas</TypographyH2>
         <FlexGrid>
           <TypographyP2>Linguagens e Códigos</TypographyP2>
-          <InputNota />
+          <InputNota {...register("LC")} />
         </FlexGrid>
         <FlexGrid>
           <TypographyP2>Ciências Humanas</TypographyP2>
-          <InputNota />
+          <InputNota {...register("CH")} />
         </FlexGrid>
         <FlexGrid>
           <TypographyP2>Ciências da Natureza</TypographyP2>
-          <InputNota />
+          <InputNota {...register("CN")} />
         </FlexGrid>
         <FlexGrid>
           <TypographyP2>Matemática</TypographyP2>
-          <InputNota />
+          <InputNota {...register("MT")} />
         </FlexGrid>
         <FlexGrid>
           <TypographyP2>Redação</TypographyP2>
-          <InputNota />
+          <InputNota {...register("RD")} />
         </FlexGrid>
-        <ButtonForm>Prosseguir</ButtonForm>
+        {formState.errors.firstName && <p>This is required</p>}
+        <ButtonForm
+          onClick={() => Router.push("/cta")}
+          disabled={!formState.isValid}>
+          Prosseguir
+        </ButtonForm>
       </SimulateContainer>
     </>
   );
