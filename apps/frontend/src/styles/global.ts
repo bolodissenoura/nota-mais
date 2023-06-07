@@ -12,8 +12,9 @@ export const globalStyles = globalCss({
     color: "$text",
     minHeight: "100vh",
     fontWeight: "300",
+    padding: "30px",
     fontFamily: "Montserrat, sans-serif",
-    fontSize: "18px",
+    fontSize: "16px",
     overflowX: "hidden",
     backgroundImage: `url("https://i.imgur.com/7nerf0E_d.webp?maxwidth=760&fidelity=grand")`,
     backgroundRepeat: "no-repeat",
@@ -24,10 +25,6 @@ export const globalStyles = globalCss({
     textDecoration: "none",
     color: "inherit",
   },
-
-  "#__next": {
-    padding: "0px 10%",
-  },
   "@media (prefers-reduced-motion: reduce)": {
     "html:focus-within": { scrollBehavior: "auto" },
     "*, *::before, *::after": {
@@ -37,4 +34,5 @@ export const globalStyles = globalCss({
       scrollBehavior: "auto !important",
     },
   },
+
 });

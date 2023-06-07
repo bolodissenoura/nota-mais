@@ -30,11 +30,11 @@ export const {
     },
 
     fontSizes: {
-      sm: "0.857em",
+      sm: "0.7em",
       md: "1em",
-      lg: "1.5em",
-      xl: "2em",
-      "2xl": "3.5em",
+      lg: "2em",
+      xl: "3em",
+      '2xl': "4em"
     },
   },
   media: {
